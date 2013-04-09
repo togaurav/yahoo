@@ -1,0 +1,25 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="SystemSuite" verbose="1">
+ 	<parameter name="url" value="http://yahoo.com" />
+	<parameter name="username" value="fortrainingepam@yahoo.com" />
+	<parameter name="password" value="qweasdzxc" />
+	<parameter name="timeout" value="30" /> 
+
+	<test name="System" >
+ 		<!-- <groups>
+			<run>
+				<include name="smoke" />
+			</run>
+		</groups>  -->
+		
+		 <classes>
+		    <class name="com.epam.training.tests.ComposeMailTest" />
+		    <class name="com.epam.training.tests.LoginTest" />
+		    <class name="com.epam.training.tests.VerifyMailTest" />
+		</classes> 
+
+	    <packages>
+			<package name="com.epam.training.tests" />
+		</packages> 
+	</test>
+</suite>
